@@ -6,43 +6,44 @@
    --color-mtext: #191C1F;
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slideInDown {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
 @keyframes progress {
   from { transform: scaleX(1); }
   to   { transform: scaleX(0); }
 }
 
-/* Responsive Typography */
-@layer components {
-   .text-responsive-sm {
-      @apply text-[12px] sm:text-[14px] md:text-[16px];
-   }
-   
-   .text-responsive-md {
-      @apply text-[14px] sm:text-[16px] md:text-[18px];
-   }
-   
-   .text-responsive-lg {
-      @apply text-[16px] sm:text-[20px] md:text-[24px];
-   }
-   
-   .text-responsive-xl {
-      @apply text-[20px] sm:text-[28px] md:text-[32px];
-   }
-
-   /* Responsive Padding */
-   .p-responsive {
-      @apply p-2 sm:p-4 md:p-6 lg:p-8;
-   }
-
-   .py-responsive {
-      @apply py-4 sm:py-6 md:py-8 lg:py-12;
-   }
-
-   .px-responsive {
-      @apply px-4 sm:px-6 md:px-8 lg:px-12;
-   }
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
 }
 
+.animate-slideInLeft {
+  animation: slideInLeft 0.3s ease-out forwards;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.3s ease-out forwards;
+}
+
+/* Custom slick dots */
 .custom-dots li.slick-active div {
    background-color: #000000 !important;
 }
@@ -56,21 +57,13 @@
   z-index: 1;
 }
 
-/* Mobile-first responsive design */
-@media (max-width: 640px) {
-   body {
-      font-size: 14px;
-   }
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
-@media (min-width: 641px) and (max-width: 1024px) {
-   body {
-      font-size: 15px;
-   }
-}
-
-@media (min-width: 1025px) {
-   body {
-      font-size: 16px;
-   }
+/* Focus outline accessibility */
+*:focus-visible {
+  outline: 2px solid #FA8232;
+  outline-offset: 2px;
 }

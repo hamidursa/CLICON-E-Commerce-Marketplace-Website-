@@ -1,17 +1,8 @@
 import React from "react";
-import { Outlet, ScrollRestoration } from "react-router-dom";
-import NavBar from "../../Components/UI/NavBar";
-import Footer from "../../Components/Footer";
+import DefaultLayout from "../../components/layout/DefaultLayout";
 
 const RootLayouts = () => {
-   return (
-      <>
-         <NavBar />
-         <Outlet />
-         <ScrollRestoration/>
-         <Footer />
-      </>
-   );
+  return <DefaultLayout />;
 };
 
 export default RootLayouts;
