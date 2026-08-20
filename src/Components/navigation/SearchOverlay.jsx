@@ -4,9 +4,10 @@ import { FiSearch, FiX, FiArrowLeft } from "react-icons/fi";
 import { products } from "../../data/products";
 import { categories } from "../../data/categories";
 import { formatPrice } from "../../utils/formatPrice";
+import CategoryIcon from "../common/CategoryIcon";
 
 /**
- * Fullscreen Mobile Search Overlay
+ * Fullscreen Mobile Search Overlay using proper SVG icons
  */
 const SearchOverlay = ({ isOpen, onClose }) => {
   const [query, setQuery] = useState("");
@@ -71,7 +72,7 @@ const SearchOverlay = ({ isOpen, onClose }) => {
       <div className="flex items-center gap-3 p-4 border-b border-[#E4E7E9] bg-white">
         <button
           onClick={onClose}
-          className="p-1 text-[#191C1F] hover:text-[#FA8232]"
+          className="p-1 text-[#191C1F] hover:text-[#FA8232] cursor-pointer"
           aria-label="Back"
         >
           <FiArrowLeft size={22} />
@@ -90,7 +91,7 @@ const SearchOverlay = ({ isOpen, onClose }) => {
             <button
               type="button"
               onClick={() => setQuery("")}
-              className="absolute right-3 text-[#77878F]"
+              className="absolute right-3 text-[#77878F] cursor-pointer"
             >
               <FiX size={18} />
             </button>
@@ -99,7 +100,7 @@ const SearchOverlay = ({ isOpen, onClose }) => {
 
         <button
           onClick={handleSubmit}
-          className="bg-[#FA8232] text-white p-2.5 rounded-full"
+          className="bg-[#FA8232] text-white p-2.5 rounded-full cursor-pointer"
           aria-label="Search"
         >
           <FiSearch size={18} />
@@ -119,9 +120,9 @@ const SearchOverlay = ({ isOpen, onClose }) => {
                   key={cat.id}
                   to={`/category/${cat.slug}`}
                   onClick={onClose}
-                  className="inline-flex items-center gap-1.5 text-xs bg-[#F2F4F5] px-3 py-1.5 rounded-full text-[#191C1F]"
+                  className="inline-flex items-center gap-1.5 text-xs bg-[#F2F4F5] px-3 py-1.5 rounded-full text-[#191C1F] hover:bg-[#FA8232] hover:text-white transition-colors"
                 >
-                  <span>{cat.icon}</span>
+                  <CategoryIcon slug={cat.slug} size={14} />
                   <span>{cat.name}</span>
                 </Link>
               ))}
@@ -176,7 +177,7 @@ const SearchOverlay = ({ isOpen, onClose }) => {
                     onClick={() => {
                       setQuery(term);
                     }}
-                    className="text-xs bg-[#F2F4F5] text-[#191C1F] px-3 py-1.5 rounded-full hover:bg-[#FA8232] hover:text-white transition-colors"
+                    className="text-xs bg-[#F2F4F5] text-[#191C1F] px-3 py-1.5 rounded-full hover:bg-[#FA8232] hover:text-white transition-colors cursor-pointer"
                   >
                     {term}
                   </button>

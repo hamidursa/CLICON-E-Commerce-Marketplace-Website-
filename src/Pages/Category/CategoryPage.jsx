@@ -5,6 +5,7 @@ import Breadcrumb from "../../Components/common/Breadcrumb";
 import ProductGrid from "../../Components/product/ProductGrid";
 import QuickViewModal from "../../Components/product/QuickViewModal";
 import EmptyState from "../../Components/common/EmptyState";
+import CategoryIcon from "../../Components/common/CategoryIcon";
 import { products } from "../../data/products";
 import { getCategoryBySlug, categories } from "../../data/categories";
 import { sortProducts, SORT_OPTIONS } from "../../utils/sortProducts";
@@ -51,7 +52,9 @@ const CategoryPage = () => {
           {/* Category Banner Header */}
           <div className="bg-[#F2F4F5] border border-[#E4E7E9] rounded-md p-6 sm:p-10 mb-8 flex flex-col sm:flex-row items-center justify-between gap-6">
             <div className="max-w-xl">
-              <span className="text-3xl mb-2 block">{category.icon}</span>
+              <div className="w-12 h-12 rounded-full bg-[#FA8232]/10 text-[#FA8232] flex items-center justify-center mb-3">
+                <CategoryIcon slug={category.slug} size={24} />
+              </div>
               <h1 className="font-pub font-bold text-2xl sm:text-3xl text-[#191C1F]">
                 {category.name}
               </h1>
@@ -85,9 +88,10 @@ const CategoryPage = () => {
                 <Link
                   key={c.id}
                   to={`/category/${c.slug}`}
-                  className="text-xs font-pub bg-[#F8F9FA] hover:bg-[#FA8232] hover:text-white border border-[#E4E7E9] px-3 py-1.5 rounded-full transition-colors shrink-0"
+                  className="inline-flex items-center gap-1.5 text-xs font-pub bg-[#F8F9FA] hover:bg-[#FA8232] hover:text-white border border-[#E4E7E9] px-3 py-1.5 rounded-full transition-colors shrink-0"
                 >
-                  {c.name}
+                  <CategoryIcon slug={c.slug} size={13} />
+                  <span>{c.name}</span>
                 </Link>
               ))}
           </div>

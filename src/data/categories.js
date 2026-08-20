@@ -15,7 +15,6 @@ export const categories = [
     description:
       "Explore the latest laptops, desktops, and workstations from top brands like Apple, Dell, HP, ASUS, and LG.",
     image: CatgImg1,
-    icon: "💻",
     productCount: 8,
     featured: true,
   },
@@ -26,7 +25,6 @@ export const categories = [
     description:
       "Discover the newest smartphones including iPhone, Samsung Galaxy, Google Pixel, and more.",
     image: CatgImg2,
-    icon: "📱",
     productCount: 5,
     featured: true,
   },
@@ -37,7 +35,6 @@ export const categories = [
     description:
       "Premium audio experiences with the finest headphones and earbuds from Sony, Bose, Apple, and Xiaomi.",
     image: CatgImg3,
-    icon: "🎧",
     productCount: 4,
     featured: true,
   },
@@ -48,7 +45,6 @@ export const categories = [
     description:
       "Everything you need — watches, keyboards, mice, tablets, power banks, and speakers.",
     image: CatgImg4,
-    icon: "⌚",
     productCount: 10,
     featured: true,
   },
@@ -59,7 +55,6 @@ export const categories = [
     description:
       "Professional-grade cameras and photography equipment from Canon, Sony, and Nikon.",
     image: CatgImg5,
-    icon: "📷",
     productCount: 1,
     featured: true,
   },
@@ -70,7 +65,6 @@ export const categories = [
     description:
       "Transform your living room with 4K OLED and QLED TVs from Samsung and Sony.",
     image: CatgImg6,
-    icon: "📺",
     productCount: 2,
     featured: true,
   },
@@ -81,7 +75,6 @@ export const categories = [
     description:
       "Level up your gaming with consoles, controllers, and accessories from Xbox, PlayStation, and Nintendo.",
     image: CatgImg1,
-    icon: "🎮",
     productCount: 2,
     featured: false,
   },

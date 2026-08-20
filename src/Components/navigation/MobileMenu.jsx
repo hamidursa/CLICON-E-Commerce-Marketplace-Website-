@@ -4,9 +4,10 @@ import { FiX, FiPhoneCall, FiChevronRight } from "react-icons/fi";
 import { PiMapPinLine, PiHeadphones, PiInfo } from "react-icons/pi";
 import { FaRepeat } from "react-icons/fa6";
 import { categories } from "../../data/categories";
+import CategoryIcon from "../common/CategoryIcon";
 
 /**
- * Slide-in Mobile Drawer Navigation
+ * Slide-in Mobile Drawer Navigation with clean SVG icons
  */
 const MobileMenu = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
@@ -26,7 +27,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
           <span className="font-pub font-bold text-lg tracking-wide">Menu</span>
           <button
             onClick={onClose}
-            className="w-8 h-8 rounded-full flex items-center justify-center bg-white/10 hover:bg-white/20 transition-colors"
+            className="w-8 h-8 rounded-full flex items-center justify-center bg-white/10 hover:bg-white/20 transition-colors cursor-pointer"
             aria-label="Close menu"
           >
             <FiX size={20} />
@@ -47,7 +48,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
                 className="flex items-center justify-between py-2 px-2.5 rounded-sm hover:bg-[#F2F4F5] text-[#191C1F] text-sm font-pub font-medium transition-colors"
               >
                 <div className="flex items-center gap-2.5">
-                  <span>{cat.icon}</span>
+                  <CategoryIcon slug={cat.slug} size={16} className="text-[#FA8232]" />
                   <span>{cat.name}</span>
                 </div>
                 <FiChevronRight size={14} className="text-[#ADB7BC]" />

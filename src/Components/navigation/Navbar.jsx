@@ -18,6 +18,7 @@ import Logo from "../../assets/logo.png";
 import { useCart } from "../../Context/CartContext";
 import { useWishlist } from "../../Context/WishlistContext";
 import { categories } from "../../data/categories";
+import CategoryIcon from "../common/CategoryIcon";
 
 const Navbar = () => {
   const { cartCount } = useCart();
@@ -75,7 +76,7 @@ const Navbar = () => {
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(true)}
-                className="md:hidden p-1 text-white hover:text-[#FA8232] transition-colors"
+                className="md:hidden p-1 text-white hover:text-[#FA8232] transition-colors cursor-pointer"
                 aria-label="Open mobile menu"
               >
                 <FiMenu size={26} />
@@ -103,7 +104,7 @@ const Navbar = () => {
               <button
                 type="button"
                 onClick={() => setMobileSearchOpen(true)}
-                className="md:hidden text-white hover:text-[#FA8232] p-1"
+                className="md:hidden text-white hover:text-[#FA8232] p-1 cursor-pointer"
                 aria-label="Open search"
               >
                 <FiSearch size={22} />
@@ -142,7 +143,7 @@ const Navbar = () => {
                 <button
                   type="button"
                   onClick={() => setUserDropdownOpen(!userDropdownOpen)}
-                  className="text-white hover:text-[#FA8232] transition-colors p-1 flex items-center"
+                  className="text-white hover:text-[#FA8232] transition-colors p-1 flex items-center cursor-pointer"
                   aria-label="User account"
                 >
                   <AiOutlineUser className="text-[24px] sm:text-[28px]" />
@@ -187,7 +188,7 @@ const Navbar = () => {
                       )}
                       <button
                         type="submit"
-                        className="bg-[#FA8232] text-white py-2 rounded-sm text-sm font-pub font-bold hover:bg-[#e07228] transition-colors mt-1"
+                        className="bg-[#FA8232] text-white py-2 rounded-sm text-sm font-pub font-bold hover:bg-[#e07228] transition-colors mt-1 cursor-pointer"
                       >
                         Sign In
                       </button>
@@ -218,7 +219,7 @@ const Navbar = () => {
               <button
                 type="button"
                 onClick={() => setCategoryDropdownOpen(!categoryDropdownOpen)}
-                className={`flex items-center gap-3 px-5 h-14 font-pub font-semibold text-sm transition-colors ${
+                className={`flex items-center gap-3 px-5 h-14 font-pub font-semibold text-sm transition-colors cursor-pointer ${
                   categoryDropdownOpen
                     ? "bg-[#FA8232] text-white"
                     : "bg-[#F2F4F5] text-[#191C1F] hover:bg-[#FA8232] hover:text-white"
@@ -243,7 +244,7 @@ const Navbar = () => {
                       className="flex items-center justify-between px-4 py-2.5 text-sm font-pub text-[#475156] hover:bg-[#F2F4F5] hover:text-[#FA8232] transition-colors"
                     >
                       <div className="flex items-center gap-2.5">
-                        <span>{cat.icon}</span>
+                        <CategoryIcon slug={cat.slug} size={16} className="text-[#FA8232]" />
                         <span>{cat.name}</span>
                       </div>
                       <span className="text-[11px] text-[#929FA5]">

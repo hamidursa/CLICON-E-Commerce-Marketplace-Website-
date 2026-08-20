@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 /**
- * Coupon Code input with discount validation
+ * Coupon Code input with discount validation — zero emoji usage
  * @param {Function} onApply - callback receiving applied discount percentage (e.g. 5, 10)
  * @param {boolean} applied - is a coupon already applied
  * @param {Function} onRemove - callback to remove coupon
@@ -27,7 +27,7 @@ const CouponInput = ({ onApply, applied = false, onRemove }) => {
       onApply(discount, clean);
       setMessage({
         type: "success",
-        text: `✨ Coupon "${clean}" applied! You saved ${discount}%.`,
+        text: `Coupon "${clean}" applied! You saved ${discount}%.`,
       });
     } else {
       setMessage({

@@ -4,9 +4,10 @@ import { FiSearch, FiX } from "react-icons/fi";
 import { products } from "../../data/products";
 import { categories } from "../../data/categories";
 import { formatPrice } from "../../utils/formatPrice";
+import CategoryIcon from "../common/CategoryIcon";
 
 /**
- * Functional Desktop SearchBar with instant suggestion dropdown
+ * Functional Desktop SearchBar with instant suggestion dropdown and SVG icons
  */
 const SearchBar = ({ className = "" }) => {
   const [query, setQuery] = useState("");
@@ -98,7 +99,7 @@ const SearchBar = ({ className = "" }) => {
           )}
           <button
             type="submit"
-            className="text-[#191C1F] hover:text-[#FA8232] transition-colors p-1"
+            className="text-[#191C1F] hover:text-[#FA8232] transition-colors p-1 cursor-pointer"
             aria-label="Submit search"
           >
             <FiSearch size={20} />
@@ -121,9 +122,9 @@ const SearchBar = ({ className = "" }) => {
                     key={cat.id}
                     to={`/category/${cat.slug}`}
                     onClick={() => setIsOpen(false)}
-                    className="inline-flex items-center gap-1.5 text-xs bg-white border border-[#E4E7E9] px-2.5 py-1 rounded-sm text-[#191C1F] hover:border-[#FA8232] hover:text-[#FA8232] transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs bg-white border border-[#E4E7E9] px-2.5 py-1.5 rounded-sm text-[#191C1F] hover:border-[#FA8232] hover:text-[#FA8232] transition-colors"
                   >
-                    <span>{cat.icon}</span>
+                    <CategoryIcon slug={cat.slug} size={14} className="text-[#FA8232]" />
                     <span>{cat.name}</span>
                   </Link>
                 ))}
@@ -160,9 +161,9 @@ const SearchBar = ({ className = "" }) => {
               <button
                 type="button"
                 onClick={handleSubmit}
-                className="w-full text-center py-2.5 text-xs font-pub font-semibold text-[#2DA5F3] hover:bg-[#F2F4F5] transition-colors"
+                className="w-full text-center py-2.5 text-xs font-pub font-semibold text-[#2DA5F3] hover:bg-[#F2F4F5] transition-colors cursor-pointer"
               >
-                View all results for &ldquo;{query}&rdquo; &rarr;
+                View all results for &ldquo;{query}&rdquo;
               </button>
             </div>
           ) : (
