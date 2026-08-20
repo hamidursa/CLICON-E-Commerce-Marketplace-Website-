@@ -1,5 +1,5 @@
 import React from "react";
-import DefaultLayout from "../../components/layout/DefaultLayout";
+import DefaultLayout from "../../Components/layout/DefaultLayout";
 
 const RootLayouts = () => {
   return <DefaultLayout />;

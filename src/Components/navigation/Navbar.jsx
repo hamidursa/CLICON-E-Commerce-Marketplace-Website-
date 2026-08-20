@@ -15,8 +15,8 @@ import SearchBar from "./SearchBar";
 import SearchOverlay from "./SearchOverlay";
 import MobileMenu from "./MobileMenu";
 import Logo from "../../assets/logo.png";
-import { useCart } from "../../context/CartContext";
-import { useWishlist } from "../../context/WishlistContext";
+import { useCart } from "../../Context/CartContext";
+import { useWishlist } from "../../Context/WishlistContext";
 import { categories } from "../../data/categories";
 
 const Navbar = () => {

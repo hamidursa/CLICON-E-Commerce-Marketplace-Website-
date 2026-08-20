@@ -1,10 +1,10 @@
 import React from "react";
-import HeroSection from "../components/home/HeroSection";
-import BenefitsBar from "../components/home/BenefitsBar";
-import CategorySection from "../components/home/CategorySection";
-import FeaturedProducts from "../components/home/FeaturedProducts";
-import PromoBanner from "../components/home/PromoBanner";
-import NewsletterSection from "../components/home/NewsletterSection";
+import HeroSection from "../Components/home/HeroSection";
+import BenefitsBar from "../Components/home/BenefitsBar";
+import CategorySection from "../Components/home/CategorySection";
+import FeaturedProducts from "../Components/home/FeaturedProducts";
+import PromoBanner from "../Components/home/PromoBanner";
+import NewsletterSection from "../Components/home/NewsletterSection";
 
 const Home = () => {
   return (

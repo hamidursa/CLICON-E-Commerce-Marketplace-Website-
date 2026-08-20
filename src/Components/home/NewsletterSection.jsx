@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
-import { useToast } from "../../context/ToastContext";
+import { useToast } from "../../Context/ToastContext";
 import NewStimg1 from "../../assets/Newsletter/img1.png";
 import NewStimg2 from "../../assets/Newsletter/img2.png";
 import NewStimg3 from "../../assets/Newsletter/img3.png";

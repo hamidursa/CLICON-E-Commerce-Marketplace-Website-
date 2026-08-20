@@ -1,11 +1,10 @@
-// src/components/product/ProductCard.jsx
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { GoHeart, GoHeartFill } from "react-icons/go";
 import { FiShoppingCart, FiEye } from "react-icons/fi";
-import { useCart } from "../../context/CartContext";
-import { useWishlist } from "../../context/WishlistContext";
-import { useToast } from "../../context/ToastContext";
+import { useCart } from "../../Context/CartContext";
+import { useWishlist } from "../../Context/WishlistContext";
+import { useToast } from "../../Context/ToastContext";
 import ProductRating from "./ProductRating";
 import ProductPrice from "./ProductPrice";
 import Badge from "../common/Badge";
@@ -104,7 +103,7 @@ const ProductCard = ({ product, onQuickView, layout = "grid" }) => {
             <button
               onClick={handleAddToCart}
               disabled={product.stock <= 0}
-              className="flex items-center gap-2 bg-[#FA8232] hover:bg-[#e07228] disabled:bg-[#E4E7E9] text-white disabled:text-[#77878F] px-4 py-2 rounded-sm text-[12px] font-pub font-bold transition-all duration-200"
+              className="flex items-center gap-2 bg-[#FA8232] hover:bg-[#e07228] disabled:bg-[#E4E7E9] text-white disabled:text-[#77878F] px-4 py-2 rounded-sm text-[12px] font-pub font-bold transition-all duration-200 cursor-pointer"
               aria-label={`Add ${product.name || product.title} to cart`}
             >
               <FiShoppingCart size={14} />
@@ -112,7 +111,7 @@ const ProductCard = ({ product, onQuickView, layout = "grid" }) => {
             </button>
             <button
               onClick={handleToggleWishlist}
-              className={`w-9 h-9 flex items-center justify-center border rounded-sm transition-all duration-200 ${
+              className={`w-9 h-9 flex items-center justify-center border rounded-sm transition-all duration-200 cursor-pointer ${
                 wishlisted
                   ? "border-[#FA8232] bg-[#FA8232] text-white"
                   : "border-[#E4E7E9] hover:border-[#FA8232] hover:text-[#FA8232]"
@@ -157,7 +156,7 @@ const ProductCard = ({ product, onQuickView, layout = "grid" }) => {
           {/* Wishlist */}
           <button
             onClick={handleToggleWishlist}
-            className={`w-10 h-10 rounded-full flex items-center justify-center shadow-md transition-all duration-200 ${
+            className={`w-10 h-10 rounded-full flex items-center justify-center shadow-md transition-all duration-200 cursor-pointer ${
               wishlisted
                 ? "bg-[#FA8232] text-white"
                 : "bg-white text-[#191C1F] hover:bg-[#FA8232] hover:text-white"
@@ -175,7 +174,7 @@ const ProductCard = ({ product, onQuickView, layout = "grid" }) => {
           <button
             onClick={handleAddToCart}
             disabled={product.stock <= 0}
-            className="w-10 h-10 rounded-full bg-white text-[#191C1F] flex items-center justify-center shadow-md hover:bg-[#FA8232] hover:text-white disabled:opacity-40 transition-all duration-200"
+            className="w-10 h-10 rounded-full bg-white text-[#191C1F] flex items-center justify-center shadow-md hover:bg-[#FA8232] hover:text-white disabled:opacity-40 transition-all duration-200 cursor-pointer"
             aria-label="Add to cart"
           >
             <FiShoppingCart className="text-[16px]" />
@@ -185,7 +184,7 @@ const ProductCard = ({ product, onQuickView, layout = "grid" }) => {
           {onQuickView && (
             <button
               onClick={handleQuickView}
-              className="w-10 h-10 rounded-full bg-white text-[#191C1F] flex items-center justify-center shadow-md hover:bg-[#2DA5F3] hover:text-white transition-all duration-200"
+              className="w-10 h-10 rounded-full bg-white text-[#191C1F] flex items-center justify-center shadow-md hover:bg-[#2DA5F3] hover:text-white transition-all duration-200 cursor-pointer"
               aria-label="Quick view"
             >
               <FiEye className="text-[16px]" />

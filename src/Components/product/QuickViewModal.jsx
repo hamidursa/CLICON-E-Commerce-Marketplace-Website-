@@ -8,9 +8,9 @@ import ProductPrice from "./ProductPrice";
 import Badge from "../common/Badge";
 import QuantitySelector from "../cart/QuantitySelector";
 import Button from "../common/Button";
-import { useCart } from "../../context/CartContext";
-import { useWishlist } from "../../context/WishlistContext";
-import { useToast } from "../../context/ToastContext";
+import { useCart } from "../../Context/CartContext";
+import { useWishlist } from "../../Context/WishlistContext";
+import { useToast } from "../../Context/ToastContext";
 
 /**
  * Quick View Product Modal component
@@ -157,7 +157,7 @@ const QuickViewModal = ({ product, isOpen, onClose }) => {
 
                 <button
                   onClick={handleToggleWishlist}
-                  className={`w-11 h-11 flex items-center justify-center border rounded-sm transition-colors ${
+                  className={`w-11 h-11 flex items-center justify-center border rounded-sm transition-colors cursor-pointer ${
                     wishlisted
                       ? "border-[#FA8232] bg-[#FA8232] text-white"
                       : "border-[#E4E7E9] text-[#191C1F] hover:border-[#FA8232] hover:text-[#FA8232]"

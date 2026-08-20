@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import Container from "../Layouts/Container";
-import Breadcrumb from "../components/common/Breadcrumb";
-import CartItem from "../components/cart/CartItem";
-import CartSummary from "../components/cart/CartSummary";
-import CouponInput from "../components/cart/CouponInput";
-import EmptyState from "../components/common/EmptyState";
-import { useCart } from "../context/CartContext";
+import Breadcrumb from "../Components/common/Breadcrumb";
+import CartItem from "../Components/cart/CartItem";
+import CartSummary from "../Components/cart/CartSummary";
+import CouponInput from "../Components/cart/CouponInput";
+import EmptyState from "../Components/common/EmptyState";
+import { useCart } from "../Context/CartContext";
 
 const Cart = () => {
   const { cart, removeFromCart, updateQuantity, clearCart, cartTotal } =

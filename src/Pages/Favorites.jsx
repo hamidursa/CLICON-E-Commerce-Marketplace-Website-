@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import Container from "../Layouts/Container";
-import Breadcrumb from "../components/common/Breadcrumb";
-import ProductGrid from "../components/product/ProductGrid";
-import QuickViewModal from "../components/product/QuickViewModal";
-import EmptyState from "../components/common/EmptyState";
-import { useWishlist } from "../context/WishlistContext";
-import { useCart } from "../context/CartContext";
-import { useToast } from "../context/ToastContext";
+import Breadcrumb from "../Components/common/Breadcrumb";
+import ProductGrid from "../Components/product/ProductGrid";
+import QuickViewModal from "../Components/product/QuickViewModal";
+import EmptyState from "../Components/common/EmptyState";
+import { useWishlist } from "../Context/WishlistContext";
+import { useCart } from "../Context/CartContext";
+import { useToast } from "../Context/ToastContext";
 
 const Favorites = () => {
   const { wishlistItems, wishlistCount } = useWishlist();

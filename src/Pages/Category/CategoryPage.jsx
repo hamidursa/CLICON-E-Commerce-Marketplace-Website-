@@ -1,10 +1,10 @@
 import React, { useState, useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
 import Container from "../../Layouts/Container";
-import Breadcrumb from "../../components/common/Breadcrumb";
-import ProductGrid from "../../components/product/ProductGrid";
-import QuickViewModal from "../../components/product/QuickViewModal";
-import EmptyState from "../../components/common/EmptyState";
+import Breadcrumb from "../../Components/common/Breadcrumb";
+import ProductGrid from "../../Components/product/ProductGrid";
+import QuickViewModal from "../../Components/product/QuickViewModal";
+import EmptyState from "../../Components/common/EmptyState";
 import { products } from "../../data/products";
 import { getCategoryBySlug, categories } from "../../data/categories";
 import { sortProducts, SORT_OPTIONS } from "../../utils/sortProducts";

@@ -16,11 +16,11 @@ import CheckOut from "./Pages/CheckOut.jsx";
 import OrderSuccess from "./Pages/OrderSuccess.jsx";
 import ProductView from "./Pages/ProductView.jsx";
 import Favorites from "./Pages/Favorites.jsx";
-import CategoryPage from "./pages/Category/CategoryPage.jsx";
+import CategoryPage from "./Pages/Category/CategoryPage.jsx";
 
-import { CartProvider } from "./context/CartContext.jsx";
-import { WishlistProvider } from "./context/WishlistContext.jsx";
-import { ToastProvider } from "./context/ToastContext.jsx";
+import { CartProvider } from "./Context/CartContext.jsx";
+import { WishlistProvider } from "./Context/WishlistContext.jsx";
+import { ToastProvider } from "./Context/ToastContext.jsx";
 import ProductProvider from "./Context/ProductContext.jsx";
 
 const router = createBrowserRouter([
