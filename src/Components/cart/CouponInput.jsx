@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 /**
- * Coupon Code input with discount validation — zero emoji usage
+ * Coupon Code input with discount validation
  * @param {Function} onApply - callback receiving applied discount percentage (e.g. 5, 10)
  * @param {boolean} applied - is a coupon already applied
  * @param {Function} onRemove - callback to remove coupon

@@ -23,7 +23,7 @@ export const filterProducts = (allProducts, filters = {}) => {
   } = filters;
 
   return allProducts.filter((product) => {
-    // Search filter — match name, brand, category, or tags
+    // Search filter: match name, brand, category, or tags
     if (search) {
       const q = search.toLowerCase();
       const matchesName = product.name?.toLowerCase().includes(q);

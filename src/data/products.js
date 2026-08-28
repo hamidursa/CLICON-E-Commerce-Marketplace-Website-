@@ -1,5 +1,5 @@
 // src/data/products.js
-// Centralized local product data — add/remove products here without touching UI components
+// Centralized local product data: add/remove products here without touching UI components
 
 export const products = [
   {
@@ -142,7 +142,7 @@ export const products = [
     sku: "SNY-WH1000XM5-BLK",
     specifications: {
       Driver: "40mm dome",
-      "Frequency Response": "4 Hz – 40,000 Hz",
+      "Frequency Response": "4 Hz - 40,000 Hz",
       Connectivity: "Bluetooth 5.2, 3.5mm",
       "Battery Life": "30 hours (NC on)",
       "Charging Time": "3.5 hours (USB-C)",
@@ -372,7 +372,7 @@ export const products = [
     name: "LG Gram 17 Ultra-Slim Laptop",
     title: "LG Gram 17 Ultra-Slim Laptop",
     description:
-      "LG Gram 17 — the world's lightest 17-inch laptop at just 1.35kg. Features Intel 13th Gen Evo, 17-hour battery, and MIL-STD 810H durability.",
+      "LG Gram 17, the world's lightest 17-inch laptop at just 1.35kg. Features Intel 13th Gen Evo, 17-hour battery, and MIL-STD 810H durability.",
     price: 1399,
     originalPrice: 1599,
     discount: 13,
@@ -612,7 +612,7 @@ export const products = [
     weight: 0.141,
     sku: "LGT-MXMS3-BLK",
     specifications: {
-      DPI: "200 – 8000 DPI",
+      DPI: "200 - 8000 DPI",
       Sensor: "Darkfield High Precision",
       Connectivity: "Bluetooth, USB Receiver",
       Battery: "500mAh, 70 days",
@@ -700,7 +700,7 @@ export const products = [
     name: "Bose QuietComfort 45 Headphones",
     title: "Bose QuietComfort 45 Headphones",
     description:
-      "Bose QuietComfort 45 — legendary noise cancellation, lifelike audio, 24-hour battery, lightweight design, and comfortable Triport acoustic architecture.",
+      "Bose QuietComfort 45 with legendary noise cancellation, lifelike audio, 24-hour battery, lightweight design, and comfortable Triport acoustic architecture.",
     price: 229,
     originalPrice: 329,
     discount: 30,
@@ -1046,7 +1046,7 @@ export const products = [
       Display: '7" OLED Multi-Touch',
       Resolution: "1280x720 (handheld)",
       Storage: "64GB internal",
-      "Battery Life": "4.5 – 9 hours",
+      "Battery Life": "4.5 - 9 hours",
       Connectivity: "Wi-Fi, Bluetooth 4.1",
       "Dock": "LAN port included",
     },
@@ -1057,7 +1057,7 @@ export const products = [
     name: "Apple Watch Ultra 2",
     title: "Apple Watch Ultra 2",
     description:
-      "Apple Watch Ultra 2 with the most advanced Apple Watch ever — titanium case, brightest display at 3000 nits, dual-frequency GPS, 60-hour battery, and S9 SiP chip.",
+      "Apple Watch Ultra 2 with the most advanced Apple Watch ever: titanium case, brightest display at 3000 nits, dual-frequency GPS, 60-hour battery, and S9 SiP chip.",
     price: 799,
     originalPrice: 849,
     discount: 6,

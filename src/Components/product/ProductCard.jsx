@@ -10,7 +10,7 @@ import ProductPrice from "./ProductPrice";
 import Badge from "../common/Badge";
 
 /**
- * Reusable product card — used in all grids across the site
+ * Reusable product card for grids across the site
  * @param {Object} product
  * @param {Function} [onQuickView] - Callback to open quick view modal
  * @param {"grid"|"list"} [layout]

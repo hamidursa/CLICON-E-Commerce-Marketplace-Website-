@@ -1,32 +1,32 @@
-# CLICON — Modern Electronics & Technology Marketplace
+# CLICON - Modern Electronics & Technology Marketplace
 
 A high-performance, component-based, production-grade e-commerce frontend architecture built with **React 19**, **Vite 7**, and **Tailwind CSS v4**.
 
 ---
 
-## 📌 Overview
+## Overview
 
 **CLICON** is a modern consumer electronics e-commerce platform designed to provide a fast, responsive, and intuitive shopping experience. It features a scalable component hierarchy, centralized data architecture, persistent shopping cart and wishlist systems, multi-facet product filtering, instant search suggestions, quick view modals, and accessible UI workflows.
 
 ---
 
-## ✨ Features
+## Features
 
-### 🛍️ Product Catalog & Discovery
+### Product Catalog & Discovery
 - **Centralized Data Layer**: 30+ curated electronics products with comprehensive specifications, pricing, brand tags, categories, and inventory metrics.
 - **Dynamic Category Pages**: Dynamic `/category/:slug` routes rendering category headers, filtered catalogs, and sibling category navigation.
 - **Dynamic Product Details**: Product views with high-resolution image gallery, zoom capabilities, technical specifications table, stock indicators, and related product recommendations.
 - **Quick View Modal**: Inspect product details, select quantities, add items to cart, or toggle wishlist items instantly from any grid without page reload.
 - **Instant Search with Auto-Complete**: Desktop & full-screen mobile search experience matching product names, brands, categories, and tags with real-time suggestion overlays.
 
-### 🛒 Shopping Cart & Wishlist
+### Shopping Cart & Wishlist
 - **Persistent Cart System**: Full `localStorage` persistence with reactive state management, quantity increment/decrement, line-item removal, and batch clearing.
 - **Slide-in Cart Drawer**: Quick slide-out drawer providing instantaneous cart previews and frictionless navigation to checkout.
 - **Dynamic Coupon & Promo Codes**: Built-in promo validation (`CLICON10`, `YS143`, `SUMMER20`) with instant savings calculations.
 - **Order Breakdown**: Automatic calculation of subtotals, tiered free-shipping rules, dynamic tax estimations, and total price.
 - **Wishlist System**: One-click heart toggle across all product cards with count badges and batch "Add All to Cart" action.
 
-### 🧭 Navigation & UX Architecture
+### Navigation & UX Architecture
 - **Responsive Header**: Sticky top navigation bar, announcements banner, live search, wishlist & cart badges, and user account dropdown.
 - **Mobile Menu Drawer**: Touch-optimized slide-in drawer with categorized navigation, direct shop links, and customer service hotlines.
 - **Toast Notification System**: Lightweight, accessible toast notifications providing real-time user feedback for cart additions, wishlist updates, and form submissions.
@@ -34,7 +34,7 @@ A high-performance, component-based, production-grade e-commerce frontend archit
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework**: [React 19](https://react.dev/)
 - **Build Tool**: [Vite 7](https://vitejs.dev/)
@@ -45,7 +45,7 @@ A high-performance, component-based, production-grade e-commerce frontend archit
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 CLICON-E-Commerce-Marketplace-Website-/
@@ -54,15 +54,15 @@ CLICON-E-Commerce-Marketplace-Website-/
 │   └── robots.txt
 ├── src/
 │   ├── assets/                # Optimized imagery (banners, logos, partners, categories)
-│   ├── components/
+│   ├── Components/
 │   │   ├── cart/              # CartDrawer, CartItem, CartSummary, CouponInput, QuantitySelector
-│   │   ├── common/            # Badge, Breadcrumb, Button, EmptyState, LoadingSpinner, Modal
+│   │   ├── common/            # Badge, Breadcrumb, Button, EmptyState, LoadingSpinner, Modal, CategoryIcon
 │   │   ├── home/              # HeroSection, BenefitsBar, CategorySection, FeaturedProducts, PromoBanner, NewsletterSection
 │   │   ├── layout/            # DefaultLayout
 │   │   ├── navigation/        # AnnouncementBar, MobileMenu, Navbar, SearchBar, SearchOverlay
 │   │   ├── product/           # ProductCard, ProductGallery, ProductGrid, ProductPrice, ProductRating, QuickViewModal, RelatedProducts
 │   │   └── ui/                # FootList, FootTag, etc.
-│   ├── context/
+│   ├── Context/
 │   │   ├── CartContext.jsx      # Reactive shopping cart provider
 │   │   ├── WishlistContext.jsx  # Reactive wishlist provider
 │   │   ├── ToastContext.jsx     # Global notification toast provider
@@ -73,7 +73,7 @@ CLICON-E-Commerce-Marketplace-Website-/
 │   │   ├── brands.js            # Brand catalog for multi-select filters
 │   │   ├── banners.js           # Hero slider & promotional card data
 │   │   └── navigation.js        # Links and navigation maps
-│   ├── pages/
+│   ├── Pages/
 │   │   ├── Cart.jsx             # Shopping cart page
 │   │   ├── Category/            # Dynamic CategoryPage.jsx
 │   │   ├── CheckOut.jsx         # Checkout & payment processing flow
@@ -94,12 +94,13 @@ CLICON-E-Commerce-Marketplace-Website-/
 │   ├── index.css                # Tailwind directives, theme variables, and keyframe animations
 │   └── main.jsx                 # Application entry point & router hierarchy
 ├── package.json
+├── vercel.json
 └── vite.config.js
 ```
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js (version 18.0.0 or higher recommended)
@@ -136,7 +137,7 @@ npm run preview
 
 ---
 
-## 🎯 Architecture Decisions
+## Architecture Decisions
 
 1. **Centralized Local Data Architecture**: Decoupled UI presentation from data sources. Adding, editing, or removing items from `src/data/products.js` updates all views, filters, and categories instantly without JSX modifications.
 2. **Context-Driven State Isolation**: Separated cart, wishlist, and toast notification concerns into dedicated contexts (`CartContext`, `WishlistContext`, `ToastContext`), preventing unnecessary re-renders across unaffected trees.
@@ -145,7 +146,7 @@ npm run preview
 
 ---
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - **Backend Integration**: REST or GraphQL API connectivity with headless CMS or Node.js / Go backend.
 - **User Authentication**: JWT/OAuth authentication with saved addresses, order histories, and profile customization.
@@ -154,6 +155,6 @@ npm run preview
 
 ---
 
-## 📄 License
+## License
 
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

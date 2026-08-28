@@ -1,5 +1,5 @@
 // src/data/banners.js
-// Hero carousel data — references existing assets
+// Hero carousel data referencing existing assets
 
 import Header_Img1 from "../assets/Header/img1.png";
 import Header_Img2 from "../assets/Header/img2.png";

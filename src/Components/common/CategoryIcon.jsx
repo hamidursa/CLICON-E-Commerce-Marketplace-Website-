@@ -10,7 +10,7 @@ import {
 import { IoGameControllerOutline } from "react-icons/io5";
 
 /**
- * Clean SVG/React-Icon renderer for categories — replaces all emojis
+ * Clean SVG and React-Icon renderer for categories
  * @param {string} slug - Category slug
  * @param {number} [size=18]
  * @param {string} [className=""]

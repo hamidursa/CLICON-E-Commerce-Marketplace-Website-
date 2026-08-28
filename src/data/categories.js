@@ -43,7 +43,7 @@ export const categories = [
     slug: "accessories",
     name: "Accessories",
     description:
-      "Everything you need — watches, keyboards, mice, tablets, power banks, and speakers.",
+      "Everything you need: watches, keyboards, mice, tablets, power banks, and speakers.",
     image: CatgImg4,
     productCount: 10,
     featured: true,
